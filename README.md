@@ -2,7 +2,7 @@
 
 A full-stack community platform for university newcomers, combining a Q&A forum, user profiles, voting, knowledge-base management, and **Navi**, a retrieval-based chatbot designed to prioritize trusted information over unsupported AI-generated answers.
 
-![Newcomer Navigator QA Page](docs/images/qa page.png)
+![Newcomer Navigator QA Page](docs/images/qa_page.png)
 
 ## Highlights
 
