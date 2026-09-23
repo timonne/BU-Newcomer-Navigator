@@ -1,0 +1,147 @@
+import type { User } from '../types';
+
+export const MOCK_USERS: User[] = [
+  {
+    id: 'u1',
+    fullName: 'Aryan Sharma',
+    username: 'aryan.sharma',
+    email: 'aryan.sharma@bennett.edu.in',
+    phone: '+91 98765 43210',
+    accountType: 'student',
+    verificationStatus: 'verified',
+    course: 'B.Tech CSE',
+    bio: 'Second-year CSE student passionate about AI and open-source. Happy to help newcomers navigate the campus!',
+    avatarColor: '#1E3A8A',
+    joinedAt: '2023-08-15',
+    questionsCount: 12,
+    answersCount: 34,
+    upvotesReceived: 148,
+  },
+  {
+    id: 'u2',
+    fullName: 'Priya Verma',
+    username: 'priya.verma',
+    email: 'priya.verma@bennett.edu.in',
+    phone: '+91 87654 32109',
+    accountType: 'student',
+    verificationStatus: 'verified',
+    course: 'BCA',
+    bio: 'BCA final year. Active in the Drama Club and Literary Society. Ask me anything about campus events!',
+    avatarColor: '#7C3AED',
+    joinedAt: '2022-08-10',
+    questionsCount: 8,
+    answersCount: 56,
+    upvotesReceived: 203,
+  },
+  {
+    id: 'u3',
+    fullName: 'Dr. Suresh Kumar',
+    username: 'dr.suresh.kumar',
+    email: 'suresh.kumar@bennett.edu.in',
+    phone: '+91 76543 21098',
+    accountType: 'staff',
+    verificationStatus: 'verified',
+    department: 'Computer Science',
+    bio: 'Associate Professor, Department of Computer Science. Research interests: Machine Learning and Data Science.',
+    avatarColor: '#059669',
+    joinedAt: '2021-01-05',
+    questionsCount: 3,
+    answersCount: 89,
+    upvotesReceived: 412,
+  },
+  {
+    id: 'u4',
+    fullName: 'Kiran Patel',
+    username: 'kiran.patel',
+    email: 'kiran.patel@gmail.com',
+    phone: '+91 65432 10987',
+    accountType: 'other',
+    verificationStatus: 'unverified',
+    bio: 'Parent of a B.Tech student. Active community member.',
+    avatarColor: '#D97706',
+    joinedAt: '2024-02-20',
+    questionsCount: 5,
+    answersCount: 7,
+    upvotesReceived: 19,
+  },
+  {
+    id: 'u5',
+    fullName: 'Riya Singh',
+    username: 'riya.singh',
+    email: 'riya.singh@bennett.edu.in',
+    phone: '+91 54321 09876',
+    accountType: 'student',
+    verificationStatus: 'verified',
+    course: 'Mass Communication',
+    bio: 'Journalism major. Working on the campus newsletter. Always up for a chai!',
+    avatarColor: '#DB2777',
+    joinedAt: '2023-07-25',
+    questionsCount: 19,
+    answersCount: 21,
+    upvotesReceived: 87,
+  },
+  {
+    id: 'u6',
+    fullName: 'Aditya Mehta',
+    username: 'aditya.mehta',
+    email: 'aditya.mehta@bennett.edu.in',
+    phone: '+91 43210 98765',
+    accountType: 'student',
+    verificationStatus: 'verified',
+    course: 'B.Tech ECE',
+    bio: 'ECE third year. Robotics Club captain. Open to mentoring juniors.',
+    avatarColor: '#0891B2',
+    joinedAt: '2022-08-14',
+    questionsCount: 6,
+    answersCount: 44,
+    upvotesReceived: 165,
+  },
+  {
+    id: 'u7',
+    fullName: 'Sneha Gupta',
+    username: 'sneha.gupta',
+    email: 'sneha.gupta@bennett.edu.in',
+    phone: '+91 32109 87654',
+    accountType: 'student',
+    verificationStatus: 'pending',
+    course: 'MBA',
+    bio: 'MBA first year from Delhi. Still figuring things out — this community has been super helpful!',
+    avatarColor: '#EA580C',
+    joinedAt: '2024-08-01',
+    questionsCount: 14,
+    answersCount: 4,
+    upvotesReceived: 22,
+  },
+  {
+    id: 'u8',
+    fullName: 'Prof. Anita Joshi',
+    username: 'prof.anita.joshi',
+    email: 'anita.joshi@bennett.edu.in',
+    phone: '+91 21098 76543',
+    accountType: 'staff',
+    verificationStatus: 'verified',
+    department: 'Mass Communication',
+    bio: 'Head of the Mass Communication department. Happy to answer questions about the programme.',
+    avatarColor: '#9333EA',
+    joinedAt: '2020-06-01',
+    questionsCount: 1,
+    answersCount: 67,
+    upvotesReceived: 299,
+  },
+];
+
+export function getUserById(id: string): User | undefined {
+  return MOCK_USERS.find(u => u.id === id);
+}
+
+export function generateUsername(fullName: string, existing: string[] = []): string {
+  const base = fullName
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '.')
+    .replace(/[^a-z0-9.]/g, '');
+  if (!existing.includes(base)) return base;
+  let i = 1;
+  while (existing.includes(`${base}${i}`)) i++;
+  return `${base}${i}`;
+}

@@ -1,0 +1,35 @@
+# ── Python / backend ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets. NEVER commit a real .env — .env.example is the committed template.
+.env
+.env.*
+!.env.example
+
+# Local SQLite database
+backend/data/
+*.db
+*.sqlite3
+
+# Test / tooling caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ── Logs / OS noise ─────────────────────────────────────────────────────
+*.log
+.DS_Store
+Thumbs.db
+
+# Note: `figma uiux/` has its own .gitignore covering node_modules, dist
+# and .env* for the frontend.
+
+# Figma Make tooling
+figma uiux/.figma/
