@@ -102,7 +102,7 @@ Run the test suite with:
 cd backend
 pytest
 
-![Newcomer Navigator Sign In](docs/images/sign in.png)
+![Newcomer Navigator Sign In](docs/images/sign_in.png)
 ![Newcomer Navigator Profile](docs/images/profile.png)
 
 ## Tech Stack
