@@ -17,10 +17,10 @@ A full-stack community platform for university newcomers, combining a Q&A forum,
 
 ## Architecture
 
-                    ┌─────────────────────┐
+                    ┌──────────────────────┐
                     │   React + TypeScript │
                     │      Frontend        │
-                    └──────────┬──────────┘
+                    └──────────┬───────────┘
                                │ REST API
                                ▼
                     ┌─────────────────────┐
@@ -146,29 +146,29 @@ pytest
 * Pytest
 
 ## Project Structure
-
-Newcomer Navigator/
-├── backend/
-│   ├── app/
-│   │   ├── api/          # API routes
-│   │   ├── core/         # Cross-cutting concerns
-│   │   ├── models/       # SQLAlchemy models
-│   │   ├── schemas/      # Pydantic schemas
-│   │   └── services/     # Business logic
-│   ├── tests/             # Backend test suite
-│   ├── alembic/           # Database migrations
-│   ├── requirements.txt
-│   └── README.md
-│
-├── figma uiux/
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       ├── services/
-│       └── context/
-│
-└── main.py
-
+  
+Newcomer Navigator/  
+├── backend/  
+│   ├── app/  
+│   │   ├── api/          # API routes  
+│   │   ├── core/         # Cross-cutting concerns  
+│   │   ├── models/       # SQLAlchemy models  
+│   │   ├── schemas/      # Pydantic schemas  
+│   │   └── services/     # Business logic  
+│   ├── tests/             # Backend test suite  
+│   ├── alembic/           # Database migrations  
+│   ├── requirements.txt  
+│   └── README.md  
+│  
+├── figma uiux/  
+│   └── src/  
+│       ├── components/  
+│       ├── pages/  
+│       ├── services/  
+│       └── context/  
+│  
+└── main.py  
+  
 ## Running Locally
 
 ### Backend
@@ -207,4 +207,4 @@ The repository contains demo data for development and testing. Demo knowledge-ba
 
 ## Development Note
 
-Generative AI tools were used during development for code generation, debugging, and documentation. The repository is intended to demonstrate the resulting application architecture, implementation, testing, and engineering decisions rather than claim that every line was manually written.
+AI tools were used during development for debugging and documentation. The repository is intended to demonstrate the application architecture, implementation, testing, and engineering decisions rather than claim that every single line was manually written, though a majority was.
